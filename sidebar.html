@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sidebar</title>
+        <style>
+            .sidebar{
+                position: fixed;
+                top: 60px;
+                left: 0px;
+                width: 70px;
+            }
+            .sidebar-div{
+                height: 73px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            /* finished this course successfully*/
+            @media(min-width: 700px){
+                .sidebar-div{
+                    flex-direction: row;
+                    max-width: 150px;
+                    margin-left: 20px;
+                }
+                .sidebar{
+                    width: 200px;
+                }
+                .sidebar-div div{
+                    padding-left: 20px;
+                    flex: 1;
+                }
+            }
+            .sidebar img{
+                width: 24px;
+                padding-top: 10px;
+            }
+            .sidebar-div div{
+                font-family: Roboto, Arial;
+                font-size: 10px;
+                padding-top: 7px;
+            }
+            .sidebar-div:hover{
+                background-color: rgb(231, 229, 229);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="sidebar">
+            <div class="sidebar-div"><div class="tool"><img src="sidebarpic/home.svg"></div><div>Home</div></div>
+            <div class="sidebar-div"><div class="tool"><img src="sidebarpic/explore.svg"></div><div>Explore</div></div>
+            <!-- Next on the list is javascript-->
+            <div class="sidebar-div"><div class="tool"><img src="sidebarpic/subscriptions.svg"></div><div>Subscriptions</div></div>
+            <div class="sidebar-div"><div class="tool"><img src="sidebarpic/originals.svg"></div><div>Originals</div></div>
+            <div class="sidebar-div"><div class="tool"><img src="sidebarpic/youtube-music.svg"></div><div>YouTube Music</div></div>
+            <div class="sidebar-div"><div class="tool"><img src="sidebarpic/library.svg"></div><div>Libary</div></div>
+        </nav>
+    </body>
+</html>
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>header</title>  
+      <style>
+        .header{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .start-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hamburger-menu{
+            width: 24px;
+            padding: 25px;
+        }
+        .youtube-logo{
+            width: 100px;
+        }
+        .middle-section{
+            max-width: 500px;
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-content: center;
+            margin-left: 70px;
+            margin-right: 35px;
+        }
+
+        .search-button{
+            margin-left: -1px;
+            border-width: 1px;
+            border-color: rgb(225, 223, 223);
+            border-style: solid;
+            border: none;
+            height: 40px;
+            width: 66px;
+        }
+        .search-img{
+            height: 25px;
+            margin-top: 4px;
+        }
+
+        .voice-button{
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            margin-left: 10px;
+        }
+        .voice-img{
+            width: 20px;
+            border-radius: 20px;
+            margin-top: 4px;
+            height: 20px;
+        }
+        .search-tab{
+            max-width: 350px;
+            height: 36px;
+            flex: 1;
+            margin-left: 50px;
+            box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.05);
+            transition: 0.15;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(225, 223, 223);
+            font-size: 17px;
+            font-family: Roboto, Arial;
+            padding-left: 13px;
+            width: 0;
+        }
+        .end-section{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 250px;
+            flex-shrink: 0;
+            margin-top: 6px;
+        }
+        .left-icons{
+            width: 24px;
+        }
+        .right-icons{
+            width: 34px;
+            border-radius: 100%;
+        }
+        .icons-div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            height: 30px;
+            width: 66px;
+            position: relative;
+        }
+        .search-button .tooltip,
+        .voice-button .tooltip{
+            font-family: Roboto, Arial;
+            position: absolute;
+            border-width: 1px;
+            border-style: solid;
+            border-color: darkgray;
+            background-color: rgb(122, 119, 119);
+            opacity: 0;
+            transition: 0.15s;
+            pointer-events: none;
+            color: white;
+            border-radius: 2px;
+            margin-top: 10px;
+            padding: 5px;
+            white-space: nowrap;
+        }
+        .icons-div .tooltip{
+            font-family: Roboto, Arial;
+            position: absolute;
+            border-width: 1px;
+            border-style: solid;
+            border-color: darkgray;
+            background-color: rgb(122, 119, 119);
+            opacity: 0;
+            transition: 0.15s;
+            pointer-events: none;
+            color: white;
+            border-radius: 2px;
+            margin-top: 35px;
+            padding: 5px;
+            white-space: nowrap;
+        }
+        .search-button:hover .tooltip,
+        .voice-button:hover .tooltip,
+        .icons-div:hover .tooltip{
+            opacity: 1;
+        }
+        .bagage{
+            position: absolute;
+            background-color: rgb(206, 16, 16);
+            color: white;
+            border-radius: 100%;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            font-family: Roboto, Arial;
+            margin-top: -5px;
+            margin-right: -17px;
+        }
+      </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="start-section">
+                <img class="hamburger-menu" src="headerpic/hamburger-menu.svg">
+                <img class="youtube-logo" src="headerpic/youtube-logo.svg">
+            </div>
+            <div class="middle-section">
+                <input  class="search-tab" type="text" placeholder="search">
+                <button class="search-button"><img class="search-img" src="headerpic/search.svg"><div class="tooltip">Search</div></button>
+                <button class="voice-button"><img class="voice-img" src="headerpic/voice-search-icon.svg"><div class="tooltip">Search with your voice</div></button>
+            </div>
+            <div class="end-section">
+                <div class="icons-div">
+                    <img class="left-icons" src="headerpic/upload.svg">
+                    <div class="tooltip">Create</div>
+                </div>
+                <div class="icons-div"><img class="left-icons" src="headerpic/youtube-apps.svg">
+                    <div class="tooltip">YouTube apps</div>
+                </div>
+                <div class="icons-div">
+                    <img class="left-icons" src="headerpic/notifications.svg"><div class="tooltip">Notifications</div>
+                    <div class="bagage">3</div>
+                </div>
+                <div class="icons-div">
+                    <a href="https://www.youtube.com/c/SuperSimpleDev?app=desktop" target="_blank">
+                        <img class="right-icons" src="headerpic/my-channel.jpeg">
+                    </a>                   
+                </div>          
+            </div>
+        </header>
+    </body>
+</html>
